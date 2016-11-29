@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+ 		<meta charset="utf-8">
+ 		<title>index</title>
+ 		<link rel="stylesheet" type="text/css" href="css/style.css">
+ 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+ 		<script type="text/javascript" src="js/tmpl.js"></script>
+ 		<script type="text/javascript" src="js/unitTest"></script>
+	</head>
+	<body>	
+		<script type="text/javascript" src="js/dist/script.js"></script>
+		<div class="wrapper">
+			<script type="text/template" id="test">
+				<div class="head"><h2><%= header %></h2></div>
+				<form>
+					<ol>
+				    	<% questions.forEach(function(question) { %>
+				    	<li><h4><%= question.question %></h4>
+				    		<ol>
+				    		<% question.answers.forEach(function(answer) { %>
+				    			<li><input type="checkbox" name="name"><%= answer %></li>
+				    		<% }); %>
+				  			</ol>
+				    	</li>
+				    	<% }); %>
+			  		</ol>
+			  		<input type="submit" value="Проверить мои результаты" class="submit" onclick="result()">
+		  		</form>		
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+.wrapper {
+	padding: 0 70px;
+}
+
+.head{
+	margin: 0 auto;
+    width: 320px;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.submit {
+	background-color: rgb(204, 230, 255);
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
